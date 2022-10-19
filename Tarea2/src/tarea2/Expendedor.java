@@ -6,6 +6,7 @@ public class Expendedor {
     private ArrayList<CocaCola> bebidasCocaCola = new ArrayList();
     private ArrayList<Sprite> bebidasSprite = new ArrayList();
     private ArrayList<Fanta> bebidasFanta = new ArrayList();
+    
     public Expendedor(int nBebidas, DepositoVuelto depositoVuelto, int precio){
         this.depositoVuelto = depositoVuelto;
         this.precio = precio;
@@ -23,10 +24,17 @@ public class Expendedor {
         }
                
     }
-    public Bebida comprarBebida(Moneda m, int cual) throws NoHayBebidaException, PagoIncorrectoException{
+    public Bebida comprarBebida(Moneda m, int cual) throws NoHayBebidaException, PagoIncorrectoException, PagoInsuficienteException{
+        if(m.getValor() == 0){
+            throw new PagoIncorrectoException("Valor de moneda no puede ser null");
+        }
         if(m.getValor() < precio){
-            throw new PagoIncorrectoException("Pago insuficiente");
-        //}else if()
-        
+            throw new PagoInsuficienteException("Pago insuficiente");
+            //COCACOLA - SPRITE - FANTA
+        }else if((cual==0 && bebidasCocaCola.isEmpty() )|| cual == 1 && bebidasSprite.isEmpty() || (cual == 2 && bebidasFanta.isEmpty())){
+            throw new NoHayBebidaException("No hay bebidas del tipo escogido");
+        }else{
+            
+        }
     }
 }
