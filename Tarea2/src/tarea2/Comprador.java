@@ -3,7 +3,10 @@ public class Comprador{
     private String tipoBebida;
     private int vuelto;    
     public Comprador(Moneda m, int b, Expendedor e) throws NoHayBebidaException, PagoIncorrectoException, PagoInsuficienteException{
+    String tipoBebida;
+    int vuelto;
         Bebida bebida = e.comprarBebida(m, b); 
+        vuelto = 0;
         switch(b){
             case 0:
                 tipoBebida = "CocaCola";
