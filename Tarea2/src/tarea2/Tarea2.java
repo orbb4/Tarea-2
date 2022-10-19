@@ -2,7 +2,9 @@ package tarea2;
 import java.util.ArrayList;
 public class Tarea2 {
     public static void main(String[] args) {
-          
+        Moneda moneda = new Moneda();
+        Expendedor expendedor = new Expendedor(5, 1000);
+        Comprador comprador = new Comprador(moneda, 1, expendedor);
     }
     
 }
