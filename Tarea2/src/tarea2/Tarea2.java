@@ -1,47 +1,9 @@
 package tarea2;
-import java.util.ArrayList;
 public class Tarea2 {
     public static void main(String[] args) {
-          
+          Deposito d = new Deposito();
+          Moneda100 m = new Moneda100();
+          System.out.println(m.getSerie());
     }
     
-}
-
-
-/*
-class DepositoVuelto{
-    private ArrayList<Moneda> monedas;
-    public Deposito(){
-        monedas = new ArrayList();
-    }
-    public void addMoneda(Bebida b){
-        monedas.add(b);
-    }
-    public Bebida getMoneda(){
-        if(monedas.size() != 0){
-            return monedas.remove(0);
-        }else{
-            return null;
-        }
-       
-    }
-}
-*/
-
-class Deposito{
-    private ArrayList<Bebida> bebidas;
-    public Deposito(){
-        bebidas = new ArrayList();
-    }
-    public void addBebida(Bebida b){
-        bebidas.add(b);
-    }
-    public Bebida getBebida(){
-        if(bebidas.size() != 0){
-            return bebidas.remove(0);
-        }else{
-            return null;
-        }
-       
-    }
 }
