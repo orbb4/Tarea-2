@@ -3,24 +3,24 @@ import java.util.ArrayList;
 public class Expendedor {
     private DepositoVuelto depositoVuelto;
     private int precio;
-    private ArrayList<CocaCola> bebidasCocaCola = new ArrayList();
-    private ArrayList<Sprite> bebidasSprite = new ArrayList();
-    private ArrayList<Fanta> bebidasFanta = new ArrayList();
-    
+    private Deposito depCocaCola = new Deposito();
+    private Deposito depSprite = new Deposito();
+    private Deposito depFanta = new Deposito();
++
     public Expendedor(int nBebidas, DepositoVuelto depositoVuelto, int precio){
         this.depositoVuelto = depositoVuelto;
         this.precio = precio;
         CocaCola bebCoca = new CocaCola(32883);
         for(int i=0; i<nBebidas; ++i){
-            bebidasCocaCola.add(bebCoca);
+            depCocaCola.addBebida(bebCoca);
         }
         Sprite bebSprite = new Sprite(29798);
         for(int i=0; i<nBebidas; ++i){
-            bebidasSprite.add(bebSprite);
+            depSprite.addBebida(bebSprite);
         }
         Fanta bebFanta = new Fanta(39845);
         for(int i=0; i<nBebidas; ++i){
-            bebidasFanta.add(bebFanta);
+            depFanta.addBebida(bebFanta);
         }
                
     }
@@ -31,10 +31,13 @@ public class Expendedor {
         if(m.getValor() < precio){
             throw new PagoInsuficienteException("Pago insuficiente");
             //COCACOLA - SPRITE - FANTA
-        }else if((cual==0 && bebidasCocaCola.isEmpty() )|| cual == 1 && bebidasSprite.isEmpty() || (cual == 2 && bebidasFanta.isEmpty())){
+        }else if((cual==0 && depCocaCola.getArrayBebidas().isEmpty() )|| cual == 1 && depSprite.getArrayBebidas().isEmpty() || (cual == 2 && depFanta.getArrayBebidas().isEmpty())){
             throw new NoHayBebidaException("No hay bebidas del tipo escogido");
         }else{
             
         }
+    }
+    public DepositoVuelto getDepositoVuelto(){
+        return depositoVuelto;
     }
 }
