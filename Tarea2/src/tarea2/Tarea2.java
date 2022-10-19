@@ -1,13 +1,12 @@
 package tarea2;
 public class Tarea2 {
-    public static void main(String[] args){
+    public static void main(String[] args) throws NoHayBebidaException, PagoIncorrectoException, PagoInsuficienteException{
         Deposito d = new Deposito();
         Moneda100 m = new Moneda100();
         System.out.println(m.getSerie());
         System.out.println(m.getSerie());
-        Moneda moneda = new Moneda();
+        Moneda1000 moneda = new Moneda1000();
         Expendedor expendedor = new Expendedor(5, 1000);
-        // ToDo:implementar try/catch para los 3 posibles errores:
-        // Comprador comprador = new Comprador(moneda, 1, expendedor);
+        Comprador comprador = new Comprador(moneda, 1, expendedor);
     }        
 }

@@ -32,6 +32,11 @@ public class Expendedor {
         }else if((cual==0 && depCocaCola.getArrayBebidas().isEmpty() )|| cual == 1 && depSprite.getArrayBebidas().isEmpty() || (cual == 2 && depFanta.getArrayBebidas().isEmpty())){
             throw new NoHayBebidaException("No hay bebidas del tipo escogido");
         }
+        int vuelto = m.getValor() - precio;
+        Moneda100 m100 = new Moneda100();
+        for(int i = 0; i < vuelto/100; i++){
+            depositoVuelto.addMoneda(m100);
+        }
         switch (cual) {
             case 0:
                 return depCocaCola.getBebida();
@@ -39,8 +44,13 @@ public class Expendedor {
                 return depSprite.getBebida();
             case 2:
                 return depFanta.getBebida();
-        }
-        return null; // en caso de un número incorrecto se devuelve null      
+            default:
+                return depCocaCola.getBebida();
+        }   
+    }
+    
+    public Moneda100 getVuelto(){
+        return depositoVuelto.getMoneda();
     }
     public DepositoVuelto getDepositoVuelto(){
         return depositoVuelto;

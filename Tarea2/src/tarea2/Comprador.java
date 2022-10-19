@@ -15,13 +15,13 @@ public class Comprador{
             case 2:
                 tipoBebida = "Fanta";
         }
-        Moneda moneda_uno = e.getDepositoVuelto().getMoneda();
+        Moneda moneda_uno = e.getVuelto();
         if(moneda_uno == null){
             vuelto = 0;
         }else{        
             while(moneda_uno != null){
                 vuelto += moneda_uno.getValor();
-                moneda_uno = e.getDepositoVuelto().getMoneda();
+                moneda_uno = e.getVuelto();
                  
             } 
         }
