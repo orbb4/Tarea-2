@@ -5,6 +5,9 @@ class Moneda{
     public String getSerie(){
         return this.toString();
     }
+    public int getValor(){
+        return 0;
+    }
 }
 class Moneda100 extends Moneda{
     Moneda100(){}
