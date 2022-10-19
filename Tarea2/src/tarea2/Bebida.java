@@ -15,11 +15,6 @@ abstract class Bebida{
     }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> beta
 class CocaCola extends Bebida{
     public CocaCola(int n1){
         super(n1);

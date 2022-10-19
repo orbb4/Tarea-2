@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package tarea2;
 
-/**
- *
- * @author maria
- */
 public class Expendedor {
+    private DepositoVuelto depositoVuelto;
+    public Expendedor(int nBebidas, DepositoVuelto depositoVuelto){
+        this.depositoVuelto = depositoVuelto;
+        
     
+    }
 }
