@@ -20,16 +20,16 @@ class Deposito{
     }
 }
 
-/*
+
 class DepositoVuelto{
-    private ArrayList<Moneda> monedas;
-    public Deposito(){
+    private ArrayList<Moneda100> monedas;
+    public DepositoVuelto(){
         monedas = new ArrayList();
     }
-    public void addMoneda(Bebida b){
+    public void addMoneda(Moneda100 b){
         monedas.add(b);
     }
-    public Bebida getMoneda(){
+    public Moneda100 getMoneda(){
         if(monedas.size() != 0){
             return monedas.remove(0);
         }else{
@@ -38,4 +38,3 @@ class DepositoVuelto{
        
     }
 }
-*/
