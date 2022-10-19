@@ -47,3 +47,19 @@ class Deposito{
        
     }
 }
+class Comprador{
+    
+    Moneda moneda;
+    int tipoBebida;
+    
+    public Comprador(Moneda m, int b, Expendedor e){
+        moneda = m;
+        tipoBebida = b;
+    }
+    public int CuantoVuelto(){
+        
+    }
+    public String queBebiste(){
+        
+    }
+}
