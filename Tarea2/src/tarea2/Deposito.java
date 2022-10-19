@@ -18,6 +18,9 @@ class Deposito{
         }
        
     }
+    public ArrayList<Bebida> getArrayBebidas(){
+        return bebidas;
+    }
 }
 
 

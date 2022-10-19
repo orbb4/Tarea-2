@@ -6,6 +6,7 @@ public class Expendedor {
     private Deposito depCocaCola = new Deposito();
     private Deposito depSprite = new Deposito();
     private Deposito depFanta = new Deposito();
++
     public Expendedor(int nBebidas, DepositoVuelto depositoVuelto, int precio){
         this.depositoVuelto = depositoVuelto;
         this.precio = precio;
@@ -23,10 +24,29 @@ public class Expendedor {
         }
                
     }
-    public Bebida comprarBebida(Moneda m, int cual) throws NoHayBebidaException, PagoIncorrectoException{
+    public Bebida comprarBebida(Moneda m, int cual) throws NoHayBebidaException, PagoIncorrectoException, PagoInsuficienteException{
+        if(m.getValor() == 0){
+            throw new PagoIncorrectoException("Valor de moneda no puede ser null");
+        }
         if(m.getValor() < precio){
-            throw new PagoIncorrectoException("Pago insuficiente");
-        //}else if()
-        
+            throw new PagoInsuficienteException("Pago insuficiente");
+            //COCACOLA - SPRITE - FANTA
+        }else if((cual==0 && depCocaCola.getArrayBebidas().isEmpty() )|| cual == 1 && depSprite.getArrayBebidas().isEmpty() || (cual == 2 && depFanta.getArrayBebidas().isEmpty())){
+            throw new NoHayBebidaException("No hay bebidas del tipo escogido");
+        }else{
+            switch (cual) {
+                case 0:
+                    return depCocaCola.getBebida();
+                case 1:
+                    return depSprite.getBebida();
+                case 2:
+                    return depFanta.getBebida();
+                default:
+                    break;
+            }
+        }
+    }
+    public DepositoVuelto getDepositoVuelto(){
+        return depositoVuelto;
     }
 }
