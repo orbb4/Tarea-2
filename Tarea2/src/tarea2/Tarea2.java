@@ -12,11 +12,9 @@ class Deposito{
         System.out.println(m.getSerie());
     }
     
-=======
         Deposito d = new Deposito();
         Moneda100 m = new Moneda100();
         System.out.println(m.getSerie());
->>>>>>> beta
         Moneda moneda = new Moneda();
         //Expendedor expendedor = new Expendedor(5, 1000);
         //Comprador comprador = new Comprador(moneda, 1, expendedor);
