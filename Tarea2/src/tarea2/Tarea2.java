@@ -1,16 +1,14 @@
 package tarea2;
 public class Tarea2 {
     public static void main(String[] args) {
-<<<<<<< HEAD
           
 class Deposito{
     private ArrayList<Bebida> bebidas;
     public Deposito(){
         bebidas = new ArrayList();
-=======
-          Deposito d = new Deposito();
-          Moneda100 m = new Moneda100();
-          System.out.println(m.getSerie());
+        Deposito d = new Deposito();
+        Moneda100 m = new Moneda100();
+        System.out.println(m.getSerie());
     }
     
         Moneda moneda = new Moneda();
@@ -50,7 +48,6 @@ class Comprador{
     public Comprador(Moneda m, int b, Expendedor e){
         moneda = m;
         tipoBebida = b;
->>>>>>> main
     }
     public int CuantoVuelto(){
         
