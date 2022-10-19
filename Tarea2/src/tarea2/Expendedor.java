@@ -1,12 +1,10 @@
 package tarea2;
-import java.util.ArrayList;
 public class Expendedor {
     private DepositoVuelto depositoVuelto;
     private int precio;
     private Deposito depCocaCola = new Deposito();
     private Deposito depSprite = new Deposito();
     private Deposito depFanta = new Deposito();
-+
     public Expendedor(int nBebidas, DepositoVuelto depositoVuelto, int precio){
         this.depositoVuelto = depositoVuelto;
         this.precio = precio;
@@ -33,18 +31,16 @@ public class Expendedor {
             //COCACOLA - SPRITE - FANTA
         }else if((cual==0 && depCocaCola.getArrayBebidas().isEmpty() )|| cual == 1 && depSprite.getArrayBebidas().isEmpty() || (cual == 2 && depFanta.getArrayBebidas().isEmpty())){
             throw new NoHayBebidaException("No hay bebidas del tipo escogido");
-        }else{
-            switch (cual) {
-                case 0:
-                    return depCocaCola.getBebida();
-                case 1:
-                    return depSprite.getBebida();
-                case 2:
-                    return depFanta.getBebida();
-                default:
-                    break;
-            }
         }
+        switch (cual) {
+            case 0:
+                return depCocaCola.getBebida();
+            case 1:
+                return depSprite.getBebida();
+            case 2:
+                return depFanta.getBebida();
+        }
+        return null; // en caso de un número incorrecto se devuelve null      
     }
     public DepositoVuelto getDepositoVuelto(){
         return depositoVuelto;
