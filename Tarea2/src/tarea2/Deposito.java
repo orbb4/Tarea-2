@@ -23,7 +23,6 @@ class Deposito{
     }
 }
 
-
 class DepositoVuelto{
     private ArrayList<Moneda100> monedas;
     public DepositoVuelto(){
