@@ -6,7 +6,6 @@ public class Expendedor {
     private Deposito depCocaCola = new Deposito();
     private Deposito depSprite = new Deposito();
     private Deposito depFanta = new Deposito();
-+
     public Expendedor(int nBebidas, DepositoVuelto depositoVuelto, int precio){
         this.depositoVuelto = depositoVuelto;
         this.precio = precio;
