@@ -41,7 +41,4 @@ class Fanta extends Bebida{
     }
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 33769c3491d86726d7b34d12af91558d58db66e9
