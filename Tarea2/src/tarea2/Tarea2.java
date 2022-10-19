@@ -40,22 +40,3 @@ class DepositoVuelto{
     }
 }
 */
-
-
-class Comprador{
-    
-    Moneda moneda;
-    int tipoBebida;
-    
-    public Comprador(Moneda m, int b, Expendedor e){
-        moneda = m;
-        tipoBebida = b;
->>>>>>> main
-    }
-    public int CuantoVuelto(){
-        
-    }
-    public String queBebiste(){
-        
-    }
-}
