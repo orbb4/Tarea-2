@@ -40,8 +40,3 @@ class Fanta extends Bebida{
         return super.beber()+"Fanta";
     }
 }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 33769c3491d86726d7b34d12af91558d58db66e9
