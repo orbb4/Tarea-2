@@ -5,6 +5,8 @@ class Moneda{
     public String getSerie(){
         return this.toString();
     }
+    abstract int getValor(){
+    }
 }
 class Moneda100 extends Moneda{
     Moneda100(){}
