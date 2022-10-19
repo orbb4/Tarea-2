@@ -6,4 +6,48 @@ public class Tarea2 {
           System.out.println(m.getSerie());
     }
     
+        Moneda moneda = new Moneda();
+        Expendedor expendedor = new Expendedor(5, 1000);
+        Comprador comprador = new Comprador(moneda, 1, expendedor);
+    }
+    
+}
+
+
+/*
+class DepositoVuelto{
+    private ArrayList<Moneda> monedas;
+    public Deposito(){
+        monedas = new ArrayList();
+    }
+    public void addMoneda(Bebida b){
+        monedas.add(b);
+    }
+    public Bebida getMoneda(){
+        if(monedas.size() != 0){
+            return monedas.remove(0);
+        }else{
+            return null;
+        }
+       
+    }
+}
+*/
+
+
+class Comprador{
+    
+    Moneda moneda;
+    int tipoBebida;
+    
+    public Comprador(Moneda m, int b, Expendedor e){
+        moneda = m;
+        tipoBebida = b;
+    }
+    public int CuantoVuelto(){
+        
+    }
+    public String queBebiste(){
+        
+    }
 }
