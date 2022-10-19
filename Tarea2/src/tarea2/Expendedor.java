@@ -34,7 +34,16 @@ public class Expendedor {
         }else if((cual==0 && depCocaCola.getArrayBebidas().isEmpty() )|| cual == 1 && depSprite.getArrayBebidas().isEmpty() || (cual == 2 && depFanta.getArrayBebidas().isEmpty())){
             throw new NoHayBebidaException("No hay bebidas del tipo escogido");
         }else{
-            
+            switch (cual) {
+                case 0:
+                    return depCocaCola.getBebida();
+                case 1:
+                    return depSprite.getBebida();
+                case 2:
+                    return depFanta.getBebida();
+                default:
+                    break;
+            }
         }
     }
     public DepositoVuelto getDepositoVuelto(){
