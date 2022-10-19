@@ -2,11 +2,8 @@
 package tarea2;
 
 public class Comprador{
-<<<<<<< HEAD
     Moneda moneda;
     int tipoBebida;
-    
-=======
     String tipoBebida;
     int vuelto;
 >>>>>>> beta
