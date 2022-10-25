@@ -23,17 +23,28 @@ public class Expendedor {
                
     }
     public Bebida comprarBebida(Moneda m, int cual) throws NoHayBebidaException, PagoIncorrectoException, PagoInsuficienteException{
+        int vuelto;
         if(m == null){
             throw new PagoIncorrectoException("Valor de moneda no puede ser null");
         }
         if(m.getValor() < precio){
+            vuelto = m.getValor();
+            for(int i = 0; i < vuelto/100; i++){
+                depositoVuelto.addMoneda();
+            }
             throw new PagoInsuficienteException("Pago insuficiente");
+            
             //COCACOLA - SPRITE - FANTA
         }else if((cual==0 && depCocaCola.getArrayBebidas().isEmpty() )|| cual == 1 && depSprite.getArrayBebidas().isEmpty() || (cual == 2 && depFanta.getArrayBebidas().isEmpty())){
+            vuelto = m.getValor();
+            System.out.println(vuelto);
+            for(int i = 0; i < vuelto/100; i++){
+                depositoVuelto.addMoneda();
+            }
             throw new NoHayBebidaException("No hay bebidas del tipo escogido");
         }
-        int vuelto = m.getValor() - precio;
-        Moneda100 m100 = new Moneda100();
+        vuelto = m.getValor() - precio;
+        
         for(int i = 0; i < vuelto/100; i++){
             depositoVuelto.addMoneda();
         }
