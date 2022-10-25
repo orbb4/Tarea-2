@@ -5,8 +5,6 @@ class Moneda{
     public String getSerie(){
         return this.toString();
     }
-
-    abstract int getValor(){
     public int getValor(){
         return 0;
     }
