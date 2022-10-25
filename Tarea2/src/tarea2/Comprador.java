@@ -1,8 +1,4 @@
 package tarea2;
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class Comprador{    
     private String tipoBebida = null;
     private int vuelto = 0;    
