@@ -15,7 +15,6 @@ abstract class Bebida{
     }
 }
 
-<<<<<<< HEAD
 class CocaCola extends Bebida{
     public CocaCola(int n1){
         super(n1);
@@ -42,5 +41,4 @@ class Fanta extends Bebida{
     }
 }
 
-=======
->>>>>>> main
+
