@@ -23,7 +23,7 @@ public class Expendedor {
                
     }
     public Bebida comprarBebida(Moneda m, int cual) throws NoHayBebidaException, PagoIncorrectoException, PagoInsuficienteException{
-        if(m.getValor() == 0){
+        if(m == null){
             throw new PagoIncorrectoException("Valor de moneda no puede ser null");
         }
         if(m.getValor() < precio){
