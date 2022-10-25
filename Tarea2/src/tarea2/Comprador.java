@@ -1,12 +1,11 @@
 package tarea2;
 public class Comprador{    
     private String tipoBebida;
-    private int vuelto;    
+    private int vuelto = 0;    
     public Comprador(Moneda m, int b, Expendedor e) throws NoHayBebidaException, PagoIncorrectoException, PagoInsuficienteException{
-    String tipoBebida;
-    int vuelto;
+        int vueltot;
         Bebida bebida = e.comprarBebida(m, b); 
-        vuelto = 0;
+        vueltot = 0;
         switch(b){
             case 0:
                 tipoBebida = "CocaCola";
@@ -17,14 +16,16 @@ public class Comprador{
         }
         Moneda moneda_uno = e.getVuelto();
         if(moneda_uno == null){
-            vuelto = 0;
-        }else{        
+            vueltot = 0;
+        }else{
             while(moneda_uno != null){
-                vuelto += moneda_uno.getValor();
+                System.out.println(moneda_uno.getSerie());
+                vueltot += moneda_uno.getValor();
                 moneda_uno = e.getVuelto();
                  
             } 
         }
+        vuelto = vueltot;
     }
 
     public int cuantoVuelto(){

@@ -35,7 +35,7 @@ public class Expendedor {
         int vuelto = m.getValor() - precio;
         Moneda100 m100 = new Moneda100();
         for(int i = 0; i < vuelto/100; i++){
-            depositoVuelto.addMoneda(m100);
+            depositoVuelto.addMoneda();
         }
         switch (cual) {
             case 0:
