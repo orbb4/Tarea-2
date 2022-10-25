@@ -37,7 +37,6 @@ public class Expendedor {
             //COCACOLA - SPRITE - FANTA
         }else if((cual==0 && depCocaCola.getArrayBebidas().isEmpty() )|| cual == 1 && depSprite.getArrayBebidas().isEmpty() || (cual == 2 && depFanta.getArrayBebidas().isEmpty())){
             vuelto = m.getValor();
-            System.out.println(vuelto);
             for(int i = 0; i < vuelto/100; i++){
                 depositoVuelto.addMoneda();
             }

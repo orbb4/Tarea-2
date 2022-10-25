@@ -13,20 +13,20 @@ public class Tarea2 {
         
         System.out.println("Comprador 1: caso moneda null");
         comprador = new Comprador(null, 1, expendedor);
-        System.out.println(comprador.cuantoVuelto());
-        System.out.println(comprador.queBebiste());
-        System.out.println("Comprador 2: caso compra exitosa");       
+        System.out.println("Vuelto: "+comprador.cuantoVuelto());
+        System.out.println("Bebida: "+comprador.queBebiste());
+        System.out.println("\nComprador 2: caso compra exitosa");       
         comprador2 = new Comprador(moneda, 0, expendedor);
-        System.out.println(comprador2.cuantoVuelto());
-        System.out.println(comprador2.queBebiste());
-        System.out.println("Comprador 3: caso pago insuficiente");
+        System.out.println("Vuelto: "+comprador2.cuantoVuelto());
+        System.out.println("Bebida: "+comprador2.queBebiste());
+        System.out.println("\nComprador 3: caso pago insuficiente");
         comprador3 = new Comprador(m, 1, expendedor);
-        System.out.println(comprador3.cuantoVuelto());
-        System.out.println(comprador3.queBebiste());
-        System.out.println("Comprador 4: caso bebidas insuficientes");
+        System.out.println("Vuelto: "+comprador3.cuantoVuelto());
+        System.out.println("Bebida: "+comprador3.queBebiste());
+        System.out.println("\nComprador 4: caso bebidas insuficientes");
         comprador4 = new Comprador(moneda, 0, expendedor);
-        System.out.println(comprador4.cuantoVuelto());
-        System.out.println(comprador4.queBebiste());
+        System.out.println("Vuelto: "+comprador4.cuantoVuelto());
+        System.out.println("Bebida: "+comprador4.queBebiste());
 
     }        
 }
