@@ -1,32 +1,56 @@
-
 package tarea2;
 
+<<<<<<< HEAD
 public class Comprador{
     Moneda moneda;
     int tipoBebida;
     String tipoBebida;
     int vuelto;
 >>>>>>> beta
+=======
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Comprador{    
+    private String tipoBebida = null;
+    private int vuelto = 0;    
+>>>>>>> beta
     public Comprador(Moneda m, int b, Expendedor e){
-        Bebida bebida = e.comprarBebida(m, b); 
-        switch(b){
-            case 0:
-                tipoBebida = "CocaCola";
-            case 1:
-                tipoBebida = "Sprite";
-            case 2:
-                tipoBebida = "Fanta";
-        Moneda moneda_uno = e.getDepositoVuelto();
-        if(moneda_uno == null){vuelto = 0}
-        else{
+        int vueltot;
+        boolean bebidaComprada = false;
+        try { 
+            Bebida bebida = e.comprarBebida(m, b);
+            bebidaComprada = true;
+        } catch (NoHayBebidaException | PagoIncorrectoException | PagoInsuficienteException ex) {
+            System.out.println(ex);
+        }
+        vueltot = 0;
+        if(bebidaComprada){
+            switch(b){
+                case 0:
+                    tipoBebida = "CocaCola";
+                case 1:
+                    tipoBebida = "Sprite";
+                case 2:
+                    tipoBebida = "Fanta";
+                
+            }
+        }
+        
+        Moneda moneda_uno = e.getVuelto();
+        if(moneda_uno == null){
+            vueltot = 0;
+        }else{
             while(moneda_uno != null){
-                vuelto += moneda_uno.getValor();
-                moneda_uno = e.getDepositoValor();
+                vueltot += moneda_uno.getValor();
+                moneda_uno = e.getVuelto();
                  
             } 
         }
+        vuelto = vueltot;
     }
-    public int CuantoVuelto(){
+
+    public int cuantoVuelto(){
         return vuelto;
     }
     public String queBebiste(){

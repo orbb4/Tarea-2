@@ -27,8 +27,8 @@ class DepositoVuelto{
     public DepositoVuelto(){
         monedas = new ArrayList();
     }
-    public void addMoneda(Moneda100 b){
-        monedas.add(b);
+    public void addMoneda(){
+        monedas.add(new Moneda100());
     }
     public Moneda100 getMoneda(){
         if(monedas.size() != 0){
