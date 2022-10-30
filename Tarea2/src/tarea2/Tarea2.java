@@ -7,21 +7,13 @@ public class Tarea2 {
     public static void main(String[] args){
         Deposito d = new Deposito();
         Moneda100 m = new Moneda100();
-<<<<<<< HEAD
-        System.out.println(m.getSerie());
-    }
-    
-        Deposito d = new Deposito();
-        Moneda100 m = new Moneda100();
         System.out.println(m.getSerie());
         Moneda moneda = new Moneda();
         Expendedor expendedor = new Expendedor(5, 1000);
         Comprador comprador = new Comprador(moneda, 1, expendedor);
-=======
-        Moneda1000 moneda = new Moneda1000();
-        
-        Expendedor expendedor = new Expendedor(1, 700);
-        Comprador comprador;
+        //Moneda1000 moneda = new Moneda1000();
+        //Expendedor expendedor = new Expendedor(1, 700);
+        Comprador comprador1;
         Comprador comprador2;
         Comprador comprador3;
         Comprador comprador4;
@@ -42,7 +34,5 @@ public class Tarea2 {
         comprador4 = new Comprador(moneda, 0, expendedor);
         System.out.println(comprador4.cuantoVuelto());
         System.out.println(comprador4.queBebiste());
-
->>>>>>> beta
     }        
 }

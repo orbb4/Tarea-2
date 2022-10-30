@@ -1,20 +1,12 @@
 package tarea2;
 
-<<<<<<< HEAD
-public class Comprador{
-    Moneda moneda;
-    int tipoBebida;
-    String tipoBebida;
-    int vuelto;
->>>>>>> beta
-=======
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Comprador{    
     private String tipoBebida = null;
     private int vuelto = 0;    
->>>>>>> beta
+
     public Comprador(Moneda m, int b, Expendedor e){
         int vueltot;
         boolean bebidaComprada = false;

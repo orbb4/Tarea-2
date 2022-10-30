@@ -5,13 +5,8 @@ public class Expendedor {
     private Deposito depCocaCola = new Deposito();
     private Deposito depSprite = new Deposito();
     private Deposito depFanta = new Deposito();
-<<<<<<< HEAD
-    public Expendedor(int nBebidas, DepositoVuelto depositoVuelto, int precio){
-        this.depositoVuelto = depositoVuelto;
-=======
     public Expendedor(int nBebidas, int precio){
         depositoVuelto = new DepositoVuelto();
->>>>>>> beta
         this.precio = precio;
         CocaCola bebCoca = new CocaCola(32883);
         for(int i=0; i<nBebidas; ++i){
