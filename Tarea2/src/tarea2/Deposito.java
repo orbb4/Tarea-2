@@ -24,14 +24,17 @@ class Deposito{
 }
 
 class DepositoVuelto{
-    private ArrayList<Moneda100> monedas;
+    private ArrayList<Moneda> monedas;
     public DepositoVuelto(){
         monedas = new ArrayList();
     }
-    public void addMoneda(){
+    public void addMoneda(Moneda m){
+        monedas.add(m);
+    }
+    public void addMoneda100(){
         monedas.add(new Moneda100());
     }
-    public Moneda100 getMoneda(){
+    public Moneda getMoneda(){
         if(monedas.size() != 0){
             return monedas.remove(0);
         }else{
