@@ -22,7 +22,6 @@ class Deposito{
         return bebidas;
     }
 }
-
 class DepositoVuelto{
     private ArrayList<Moneda100> monedas;
     public DepositoVuelto(){
